@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Scrolling</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<nav>
+		<!--adding the #"name" this links the navigation to another part on the page and will "jump" you to that place because is is an <a href></a> tag -->	
+		<a id="home" href="#homeSection">HOME</a>
+		<a id="about" href="#aboutSection">ABOUT</a>
+		<a id="interests" href="#interestsSection">INTERESTS</a>		
+		<a id="portfolio" href="#portfolioSection">PORTFOLIO</a>
+		<a id="contact" href="#contactSection">CONTACT</a>
+	</nav>
+	<!-- by adding a id to each div tag you can reference that id now in other parts like <nav> *see above* -->
+	<div id="homeSection" class="sect sectOne">
+		
+	</div>
+	<div id="aboutSection" class="subSection">
+		<h1>About</h1>
+	</div>
+	<div id="interestsSection" class="sect sectTwo">
+		<h1>Interests</h1>
+	</div>
+	<div id="portfolioSection" class="subSection">
+		<h1>Portfolio</h1>
+	</div>
+	<div id="contactSection" class="sect sectThree">
+		<h1>Contact</h1>
+	</div>
+
+<!-- load your jquery and javascript at the bottom so that the page will load faster -->
+<script src="jquery/jquery-1.12.3.min.js"></script> <!-- downloaded from jquery.com the first commpressed option and saved it in the root file then added it in here with the correct path. This allows us to use jquery in our page. This must be above the scripts that you are writing in order for them to work. -->
+<script>
+	$('nav a').click(function(){
+    	$('html, body').animate({
+        	scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 1000);
+	    return false;
+	});
+</script>
+<!-- this didn't work when I used an external .js file...
+<script src="jquery/app.js"></script> <!-- allows any jquery scripts you write to be accesed from the .js file you created in your jquery folder where your download is. This must be below the jquery link that you downloaded-->
+</body>
+</html>

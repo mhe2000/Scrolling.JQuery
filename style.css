@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+/*removes all the margins from the page.*/
+
+html, body{
+	height: 100%;
+}
+/*need to set the parent first for the rest of the styles to show in this case.*/
+
+h1,h2,h3,h4,h5,h6,p{
+	margin-bottom: 20px;
+	color: #fff;
+}
+/*adds a margin bottom back to all of those elements.*/
+
+nav{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.5); /*stands for RGB Alpha=opacity*/
+	z-index: 99; /*can only use if you use position: of absolute or fixed is used*/
+	text-align: center;
+}
+
+nav a{
+	text-decoration: none;/*removes the underline to the link*/
+	color: #fff;
+	margin-left: 30px;
+	line-height: 50px;
+}
+
+.sect{
+	height: 100%;
+	background-size: cover; /*makes an image cover the div*/
+	background-attachment: fixed;/*gives the affect that the image is fixed and subsections are scrolling over image*/
+}
+/*where the images are so want to use 100%*/
+
+
+.subSection{
+	height: 50%;
+	background-color: bisque;
+}
+/*the appearance of a "banner" so want a smaller height so it looks like they are scrolling over the images*/
+
+.sectOne{
+	background-image: url("images/coastal.jpg");
+}
+.sectTwo{
+	background-image: url("images/grassyFields.jpg");
+}
+.sectThree{
+	background-image: url("images/cloudyLake.jpg");
+}
